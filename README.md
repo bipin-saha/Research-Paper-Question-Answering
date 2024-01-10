@@ -7,7 +7,7 @@ To install the required Python packages for your project, follow these steps:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/your-repository.git
+   git clone https://github.com/bipin-saha/Research-Paper-Question-Answering.git
    cd Research-Paper-Question-Answering
    ```
 
