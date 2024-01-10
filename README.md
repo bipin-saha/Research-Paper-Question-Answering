@@ -9,12 +9,26 @@ To install the required Python packages for your project, follow these steps:
    ```bash
    git clone https://github.com/your-username/your-repository.git
    cd Research-Paper-Question-Answering
+   ```
 
 2. **Select PDF Option:**
    ```bash
    cd SinglePDFQnA
-or 
-      ```bash
-      cd MultiPDFQnA
-
-
+   ```
+   or 
+   ```bash
+   cd MultiPDFQnA
+   ```
+3. **Install Packages:**
+   ```bash
+      pip install -r requirements.txt
+   ```
+4. **Run App:**
+(SinglePDFQnA)
+   ```bash
+      streamlit run main.py
+   ```
+   or (MultiPDFQnA)
+   ```bash
+      streamlit run app.py
+   ```
