@@ -9,13 +9,12 @@ To install the required Python packages for your project, follow these steps:
    ```bash
    git clone https://github.com/your-username/your-repository.git
    cd Research-Paper-Question-Answering
-   
 
 2. **Select PDF Option:**
    ```bash
    cd SinglePDFQnA
 or 
-   ```bash
-   cd MultiPDFQnA
+      ```bash
+      cd MultiPDFQnA
 
 
