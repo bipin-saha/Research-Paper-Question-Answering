@@ -21,14 +21,14 @@ To install the required Python packages for your project, follow these steps:
    ```
 3. **Install Packages:**
    ```bash
-      pip install -r requirements.txt
+   pip install -r requirements.txt
    ```
 4. **Run App:**
 (SinglePDFQnA)
    ```bash
-      streamlit run main.py
+   streamlit run main.py
    ```
    or (MultiPDFQnA)
    ```bash
-      streamlit run app.py
+   streamlit run app.py
    ```
