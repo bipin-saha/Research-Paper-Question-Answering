@@ -21,7 +21,6 @@ jobs:
           HF: ${{ secrets.HF }}
         run: |
           git remote add space https://huggingface.co/spaces/bipinsaha/chatPDF
-          git fetch space --prune --unshallow
 
       - name: Push to hub
         env:
