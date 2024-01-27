@@ -1,4 +1,5 @@
 name: Sync to Hugging Face hub
+
 on:
   push:
     branches: [main]
@@ -10,14 +11,19 @@ jobs:
   sync-to-hub:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
         with:
           fetch-depth: 0
+
       - name: Add remote 
         env:
           HF: ${{ secrets.HF }}
-        run: git remote add space https://huggingface.co/spaces/bipinsaha/chatPDF
+        run: |
+          git remote add space https://huggingface.co/spaces/bipinsaha/chatPDF
+          git fetch space --prune --unshallow
+
       - name: Push to hub
         env:
           HF: ${{ secrets.HF }}
-        run: git push --force https://huggingface.co/spaces/bipinsaha/chatPDF main
+        run: git push space main
