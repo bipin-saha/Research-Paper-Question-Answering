@@ -13,7 +13,9 @@ develop-eggs/
 dist/
 etc/
 include/
+Include/
 lib/
+Lib/
 Scripts/
 share/
 downloads/
