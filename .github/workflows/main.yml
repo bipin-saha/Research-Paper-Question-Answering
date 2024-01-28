@@ -1,36 +1,23 @@
 name: Sync to Hugging Face hub
-
 on:
   push:
     branches: [main]
 
-  # To run this workflow manually from the Actions tab
+  # to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
   sync-to-hub:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Git
-        run: |
-          git config --global user.email "bipinsaha142@gmail.com"
-          git config --global user.name "bipin-saha"
-
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-
       - name: Add remote 
         env:
           HF: ${{ secrets.HG }}
-        run: |
-          git remote add space https://bipinsaha:$HF@huggingface.co/spaces/bipinsaha/chatPDF
-
+        run: git remote add space https://bipinsaha:$HF@huggingface.co/spaces/bipinsaha/chatPDF
       - name: Push to hub
         env:
           HF: ${{ secrets.HG }}
-        run: |
-          git add .
-          git commit -m "Update"
-          git push https://bipinsaha:${HF}@huggingface.co/spaces/bipinsaha/chatPDF main
+        run: git push --force https://bipinsaha:$HF@huggingface.co/spaces/bipinsaha/chatPDF main
