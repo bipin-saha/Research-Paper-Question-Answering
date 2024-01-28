@@ -13,11 +13,8 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - name: Add remote 
-        env:
-          HF: ${{ secrets.HF }}
-        run: git remote set-url origin git@hf.co:https://bipinsaha:$HF@huggingface.co/spaces/bipinsaha/chatPDF
+          lfs: true
       - name: Push to hub
         env:
-          HF: ${{ secrets.HF }}
-        run: git push --force https://bipinsaha:$HF@huggingface.co/spaces/bipinsaha/chatPDF main
+          HF_TOKEN: ${{ secrets.HF }}
+        run: git push https://bipinsaha:$HF_TOKEN@huggingface.co/spaces/bipinsaha/chatPDF main
