@@ -11,6 +11,11 @@ jobs:
   sync-to-hub:
     runs-on: ubuntu-latest
     steps:
+      - name: Set up Git
+        run: |
+          git config --global user.email "bipinsaha142@gmail.com"
+          git config --global user.name "bipin-saha"
+
       - name: Checkout code
         uses: actions/checkout@v2
         with:
