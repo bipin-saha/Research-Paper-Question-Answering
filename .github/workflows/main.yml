@@ -21,5 +21,5 @@ jobs:
         env:
           HF: ${{ secrets.HG }}
         run: git add .
-        run: git commit -m "Update"
-        run: git push https://bipinsaha:${{ secrets.HG }}@huggingface.co/spaces/bipinsaha/chatPDF main
+        git commit -m "Update"
+        git push https://bipinsaha:${{ secrets.HG }}@huggingface.co/spaces/bipinsaha/chatPDF main
