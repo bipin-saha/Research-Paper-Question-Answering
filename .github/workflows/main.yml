@@ -16,8 +16,8 @@ jobs:
       - name: Add remote 
         env:
           HF: ${{ secrets.HF }}
-        run: git remote add space https://huggingface.co/spaces/bipinsaha/chatPDF
+        run: git remote add space https://bipinsaha:$HF@huggingface.co/spaces/bipinsaha/chatPDF
       - name: Push to hub
         env:
           HF: ${{ secrets.HF }}
-        run: git push --force https://huggingface.co/spaces/bipinsaha/chatPDF
+        run: git push --force https://bipinsaha:$HF@huggingface.co/spaces/bipinsaha/chatPDF main
